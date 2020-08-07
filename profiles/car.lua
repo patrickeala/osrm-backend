@@ -1,5 +1,5 @@
 -- Car profile
-
+-- Aug. 08, 2020: change traffic_light_penalty from 2 units to 120 units
 api_version = 4
 
 Set = require('lib/set')
@@ -26,7 +26,7 @@ function setup()
       continue_straight_at_waypoint  = true,
       use_turn_restrictions          = true,
       left_hand_driving              = false,
-      traffic_light_penalty          = 2,
+      traffic_light_penalty          = 120,   -- not sure if unit is in minute or seconds, but in this case: 120 s
     },
 
     default_mode              = mode.driving,
