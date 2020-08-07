@@ -26,7 +26,7 @@ function setup()
       continue_straight_at_waypoint  = true,
       use_turn_restrictions          = true,
       left_hand_driving              = false,
-      traffic_light_penalty          = 120,
+      traffic_light_penalty          = 2,
     },
 
     default_mode              = mode.driving,
@@ -139,20 +139,20 @@ function setup()
 
     speeds = Sequence {
       highway = {
-        motorway        = 90,
-        motorway_link   = 45,
-        trunk           = 85,
-        trunk_link      = 40,
-        primary         = 65,
-        primary_link    = 30,
-        secondary       = 55,
-        secondary_link  = 25,
-        tertiary        = 40,
-        tertiary_link   = 20,
-        unclassified    = 25,
-        residential     = 25,
-        living_street   = 10,
-        service         = 15
+        motorway        = 70, -- 90
+        motorway_link   = 10, -- 45
+        trunk           = 25, -- 85
+        trunk_link      = 10, -- 40
+        primary         = 25, -- 65
+        primary_link    = 10, -- 30
+        secondary       = 25, -- 55
+        secondary_link  = 10, -- 25
+        tertiary        = 20, -- 40
+        tertiary_link   = 10, -- 20
+        unclassified    = 20, -- 25
+        residential     = 15, -- 25
+        living_street   = 10, -- 10
+        service         = 10 --- 15
       }
     },
 
@@ -258,11 +258,13 @@ function setup()
     },
 
     -- http://wiki.openstreetmap.org/wiki/Speed_limits
+    -- changed the max speed according to Philippine Laws for trucks
+    --https://www.autodeal.com.ph/articles/car-features/quick-guide-speed-limits-in-philippines
     maxspeed_table_default = {
-      urban = 50,
-      rural = 90,
-      trunk = 110,
-      motorway = 130
+      urban = 20, -- original is 50
+      rural = 30, -- original is 90
+      trunk = 30, -- original is 110
+      motorway = 80 -- original is 130
     },
 
     -- List only exceptions
