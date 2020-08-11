@@ -139,7 +139,7 @@ function setup()
 
     speeds = Sequence {
       highway = {
-        motorway        = 70, -- 90
+        motorway        = 55, -- 90
         motorway_link   = 10, -- 45
         trunk           = 25, -- 85
         trunk_link      = 10, -- 40
